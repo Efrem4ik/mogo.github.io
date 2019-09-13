@@ -1,8 +1,7 @@
 $(".service__accordeon .service__accordeon-text").hide().prev().click(function() {
     $(this).parents(".service__accordeon-item").find(".service__accordeon-text").not(this).slideUp().prev().removeClass("active");
     $(this).next().not(":visible").slideDown().prev().addClass("active");
-    $('.service__accordeon .service__accordeon-text').not($(this).next()).removeClass("active").slideUp(500).prev().removeClass('active');
-
+    $('.service__accordeon .service__accordeon-text').not($(this).next()).slideUp(500).prev().removeClass('active');
 });
 
 $('.slider').slick({
